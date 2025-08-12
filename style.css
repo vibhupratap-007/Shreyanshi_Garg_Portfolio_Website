@@ -236,6 +236,68 @@ section {
 }
 
 /* ===============================
+   SERVICES — Card Grid (NEW)
+   =============================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.service-card {
+    background: var(--card);
+    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius);
+    padding: 26px 26px 22px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.04);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.svc-num {
+    display: block;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-bottom: 10px;
+    color: #0f0f0f;
+}
+
+.svc-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(22px, 1.6vw, 28px);
+    color: var(--accent);
+    margin: 2px 0 10px;
+}
+
+.svc-text {
+    color: var(--muted);
+    line-height: 1.65;
+    margin: 0 0 18px;
+    max-width: 60ch;
+}
+
+.svc-metric {
+    color: var(--muted);
+    margin-top: auto;
+}
+
+.svc-metric span {
+    font-weight: 600;
+    color: #7a7a7a;
+}
+
+.svc-metric strong {
+    font-weight: 800;
+    letter-spacing: .02em;
+    color: var(--accent);
+    margin-left: 8px;
+}
+
+/* ===============================
    Contact (icons + form layout)
    =============================== */
 .contact-grid {
@@ -321,8 +383,7 @@ section {
     background: #000;
     color: #fff;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* image | content */
+    grid-template-columns: 1fr 1fr; /* image | content */
     gap: 40px;
     padding: 40px;
     border-radius: 24px;
@@ -402,18 +463,14 @@ section {
     align-items: center;
     gap: 10px;
     border: 2px solid #fff;
-    padding: 8px 16px;
-    /* smaller padding */
+    padding: 8px 16px; /* smaller padding */
     border-radius: 999px;
     font-weight: 700;
     color: #fff;
     background: transparent;
-    white-space: nowrap;
-    /* keeps text on one line */
-    width: auto;
-    /* fit to text size */
-    max-width: max-content;
-    /* ensures it doesn't stretch */
+    white-space: nowrap; /* keeps text on one line */
+    width: auto; /* fit to text size */
+    max-width: max-content; /* ensures it doesn't stretch */
     transition: background .25s ease, color .25s ease;
 }
 
@@ -421,7 +478,6 @@ section {
     background: #fff;
     color: #000;
 }
-
 
 /* Add some top spacing before About; nothing below since content is inside */
 #about {
@@ -450,8 +506,7 @@ section {
 
 @media (max-width: 900px) {
     .about-visual {
-        grid-template-columns: 1fr;
-        /* stack image above content */
+        grid-template-columns: 1fr; /* stack image above content */
         text-align: center;
     }
 
