@@ -10,12 +10,12 @@
     --outline: #222;
     --card: #ffffff;
     --pink: #c83bd1;
-    --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    --shadow: 0 10px 24px rgba(0, 0, 0, .08);
     --radius: 18px;
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 html,
@@ -29,12 +29,12 @@ body {
 
 a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: none
 }
 
 img {
     max-width: 100%;
-    display: block;
+    display: block
 }
 
 /* ===============================
@@ -44,27 +44,27 @@ img {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, .85);
     backdrop-filter: saturate(180%) blur(12px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, .06);
 }
 
 .container {
     width: min(1200px, 92%);
-    margin-inline: auto;
+    margin-inline: auto
 }
 
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 16px
 }
 
 nav a {
     padding: 18px 8px;
     display: inline-block;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .follow-btn {
@@ -75,7 +75,7 @@ nav a {
     padding: 10px 18px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 8px
 }
 
 .plus {
@@ -85,10 +85,10 @@ nav a {
     width: 28px;
     height: 28px;
     border-radius: 8px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .08);
     font-weight: 900;
-    margin-right: 8px;
+    margin-right: 8px
 }
 
 /* ===============================
@@ -104,7 +104,7 @@ nav a {
 .hero-inner {
     position: relative;
     display: grid;
-    place-items: center;
+    place-items: center
 }
 
 .eyebrow {
@@ -113,7 +113,7 @@ nav a {
     font-size: 32px;
     text-align: center;
     margin-bottom: 10px;
-    font-family: "Playfair Display", serif;
+    font-family: "Playfair Display", serif
 }
 
 .title {
@@ -124,7 +124,7 @@ nav a {
     line-height: .9;
     color: var(--accent);
     text-align: center;
-    margin: 0;
+    margin: 0
 }
 
 .subtitle {
@@ -136,13 +136,13 @@ nav a {
     color: transparent;
     -webkit-text-stroke: 1.5px var(--accent-2);
     margin: 8px 0 22px;
-    text-align: center;
+    text-align: center
 }
 
 .hero-actions {
     display: flex;
     gap: 14px;
-    justify-content: center;
+    justify-content: center
 }
 
 .btn {
@@ -150,18 +150,18 @@ nav a {
     border-radius: 14px;
     font-weight: 700;
     border: 0;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .btn-primary {
     background: #f0d990;
     color: #6d5630;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 .btn-secondary {
     background: #a77858;
-    color: #fff;
+    color: #fff
 }
 
 .face-left,
@@ -169,35 +169,35 @@ nav a {
     position: absolute;
     top: 40px;
     opacity: .18;
-    filter: grayscale(1);
+    filter: grayscale(1)
 }
 
 .face-left {
     left: 0;
-    width: min(38vw, 420px);
+    width: min(38vw, 420px)
 }
 
 .face-right {
     right: 0;
-    width: min(32vw, 360px);
+    width: min(32vw, 360px)
 }
 
 .hero-person {
     position: relative;
     margin-top: 10px;
     width: min(420px, 55vw);
-    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, .15));
+    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, .15))
 }
 
-@media (min-width: 900px) {
+@media (min-width:900px) {
     .hero-person {
         position: relative;
         z-index: 2;
-        transform: translateY(-90px);
+        transform: translateY(-90px)
     }
 
     .hero {
-        padding-bottom: 80px;
+        padding-bottom: 80px
     }
 }
 
@@ -205,7 +205,7 @@ nav a {
    Sections & Titles
    =============================== */
 section {
-    padding: 90px 0;
+    padding: 90px 0
 }
 
 .section-title {
@@ -213,12 +213,12 @@ section {
     font-weight: 900;
     font-size: clamp(36px, 5vw, 60px);
     text-align: center;
-    margin: 0 0 26px;
+    margin: 0 0 26px
 }
 
 .underpaint {
     position: relative;
-    display: inline-block;
+    display: inline-block
 }
 
 .underpaint::after {
@@ -232,11 +232,11 @@ section {
     background: var(--pink);
     border-radius: 999px;
     z-index: -1;
-    filter: blur(.3px);
+    filter: blur(.3px)
 }
 
 /* ===============================
-   SERVICES — Card Grid (NEW)
+   SERVICES — Card Grid
    =============================== */
 .services-grid {
     display: grid;
@@ -246,16 +246,16 @@ section {
 
 .service-card {
     background: var(--card);
-    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    border: 1.5px solid rgba(0, 0, 0, .08);
     border-radius: var(--radius);
     padding: 26px 26px 22px;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .04);
     transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .service-card:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 .svc-num {
@@ -263,39 +263,162 @@ section {
     font-weight: 700;
     letter-spacing: .08em;
     margin-bottom: 10px;
-    color: #0f0f0f;
+    color: #0f0f0f
 }
 
 .svc-title {
     font-family: "Playfair Display", serif;
     font-size: clamp(22px, 1.6vw, 28px);
     color: var(--accent);
-    margin: 2px 0 10px;
+    margin: 2px 0 10px
 }
 
 .svc-text {
     color: var(--muted);
     line-height: 1.65;
     margin: 0 0 18px;
-    max-width: 60ch;
+    max-width: 60ch
 }
 
 .svc-metric {
-    color: var(--muted);
-    margin-top: auto;
+    color: var(--muted)
 }
 
 .svc-metric span {
     font-weight: 600;
-    color: #7a7a7a;
+    color: #7a7a7a
 }
 
 .svc-metric strong {
     font-weight: 800;
     letter-spacing: .02em;
     color: var(--accent);
-    margin-left: 8px;
+    margin-left: 8px
 }
+
+/* ===============================
+   My Latest Work (static cards)
+   =============================== */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.work-item {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    transition: transform .18s ease, box-shadow .18s ease;
+    display: block;
+}
+
+.work-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .12)
+}
+
+.work-thumb {
+    aspect-ratio: 16/10;
+    background-size: cover;
+    background-position: center
+}
+
+.work-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .04), rgba(0, 0, 0, 0));
+}
+
+.work-title {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.work-title strong {
+    font-size: 15px;
+    line-height: 1.2;
+    display: block
+}
+
+.work-title span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px
+}
+
+.work-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eee;
+    border: 1px solid rgba(0, 0, 0, .06)
+}
+
+.work-badge {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 2px solid #222
+}
+
+.show-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px
+}
+
+.show-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 2px solid #2a2a2a;
+    background: transparent;
+    font-weight: 700
+}
+
+/* ===============================
+   My Latest Work (Behance embeds)
+   =============================== */
+.work-embed {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    background: #fff;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.work-embed:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
+}
+
+.work-embed iframe {
+    width: 100%;
+    height: 340px;
+    /* adjust 320–380px to taste */
+    border: 0;
+    display: block;
+}
+
+.show-more-wrap {
+  grid-column: 1 / -1; /* Make it take full width of grid */
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
 
 /* ===============================
    Contact (icons + form layout)
@@ -304,20 +427,20 @@ section {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     gap: 40px;
-    align-items: start;
+    align-items: start
 }
 
 .contact-info {
     margin-top: 20px;
     display: grid;
-    gap: 18px;
+    gap: 18px
 }
 
 .contact-item {
     display: grid;
     grid-template-columns: 44px 1fr;
     align-items: center;
-    gap: 14px;
+    gap: 14px
 }
 
 .contact-icon {
@@ -335,17 +458,17 @@ section {
     width: 22px;
     height: 22px;
     fill: #a7a7a7;
-    display: block;
+    display: block
 }
 
 .contact-item a {
     color: #1f1f1f;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .contact-item a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 .contact-form input,
@@ -361,7 +484,7 @@ section {
 }
 
 .contact-form textarea {
-    min-height: 200px;
+    min-height: 200px
 }
 
 .contact-form .submit {
@@ -376,14 +499,18 @@ section {
 }
 
 /* ===============================
-   About Section (All content inside black panel)
+   About Section (all content inside black panel)
    =============================== */
+#about {
+    padding-top: 60px
+}
+
 .about-visual {
     position: relative;
     background: #000;
     color: #fff;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* image | content */
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     padding: 40px;
     border-radius: 24px;
@@ -394,29 +521,29 @@ section {
 
 .about-img {
     max-width: 100%;
-    height: auto;
+    height: auto
 }
 
 .about-overlay {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px
 }
 
 .about-overlay .section-title {
     text-align: left;
     margin: 0 0 12px;
-    color: #fff;
+    color: #fff
 }
 
 .about-overlay p {
     margin: 0;
     line-height: 1.7;
     color: #ddd;
-    font-weight: 500;
+    font-weight: 500
 }
 
-/* Skills inside the black panel */
+/* Skills inside About */
 .about-overlay .skills-title {
     font-family: "Playfair Display", serif;
     font-weight: 900;
@@ -427,26 +554,26 @@ section {
 
 .about-overlay .skills {
     display: grid;
-    gap: 14px;
+    gap: 14px
 }
 
 .about-overlay .skill {
     display: grid;
     grid-template-columns: 160px 1fr;
     gap: 16px;
-    align-items: center;
+    align-items: center
 }
 
 .about-overlay .skill-name {
     font-weight: 700;
-    color: #fff;
+    color: #fff
 }
 
 .about-overlay .skill-bar {
     height: 12px;
     border-radius: 999px;
     background: #444;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .about-overlay .skill-fill {
@@ -463,71 +590,66 @@ section {
     align-items: center;
     gap: 10px;
     border: 2px solid #fff;
-    padding: 8px 16px; /* smaller padding */
+    padding: 8px 16px;
     border-radius: 999px;
     font-weight: 700;
     color: #fff;
     background: transparent;
-    white-space: nowrap; /* keeps text on one line */
-    width: auto; /* fit to text size */
-    max-width: max-content; /* ensures it doesn't stretch */
+    white-space: nowrap;
+    width: auto;
+    max-width: max-content;
     transition: background .25s ease, color .25s ease;
 }
 
 .about-overlay .see-more:hover {
     background: #fff;
-    color: #000;
-}
-
-/* Add some top spacing before About; nothing below since content is inside */
-#about {
-    padding-top: 60px;
+    color: #000
 }
 
 /* ===============================
    Responsive Adjustments
    =============================== */
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
 
     .services-grid,
     .work-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr)
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 
     .face-left,
     .face-right {
-        display: none;
+        display: none
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px) {
     .about-visual {
-        grid-template-columns: 1fr; /* stack image above content */
-        text-align: center;
+        grid-template-columns: 1fr;
+        text-align: center
     }
 
     .about-overlay .skill {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 10px
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width:640px) {
     nav {
-        display: none;
+        display: none
     }
 
     .services-grid,
     .work-grid,
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 
     .subtitle {
-        -webkit-text-stroke: 1.2px var(--accent-2);
+        -webkit-text-stroke: 1.2px var(--accent-2)
     }
 }
