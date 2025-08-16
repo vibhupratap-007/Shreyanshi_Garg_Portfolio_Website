@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio — Clone</title>
+    <title>Shreyanshi Garg Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,31 +21,99 @@
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#services">Services</a>
-                    <!-- Change here -->
                     <a href="assets/resume.pdf" download="Shreyanshi_Garg_Resume.pdf">Resume</a>
                     <a href="#contact">Contact</a>
                 </nav>
-                <div style="display:flex;align-items:center;gap:10px">
-                    <span class="plus">+</span>
-                    <a class="follow-btn" href="#">Follow</a>
+
+                <!-- Plus + Follow Section -->
+                <div class="cta-group">
+                    <!-- + button toggles dropdown -->
+                    <button class="plus-btn" id="platformToggle" type="button" aria-haspopup="menu"
+                        aria-expanded="false" aria-controls="platformMenu" aria-label="Open platform selection menu"
+                        title="Choose a platform">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" fill="none"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div class="platform-menu" id="platformMenu" role="menu" aria-label="Choose platform"
+                        aria-labelledby="platformToggle">
+                        <!-- GitHub -->
+                        <button class="platform-item" role="menuitemradio" aria-checked="false" data-platform="github"
+                            data-url="https://github.com/Shreyanshi0421">
+                            <span class="platform-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 10 8.1 11.6.6.1.8-.3.8-.6v-2c-3.3.8-4-1.5-4-1.5-.6-1.6-1.5-2-1.5-2-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.1 2 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.8-2.6-.3-5.4-1.3-5.4-6 0-1.3.5-2.3 1.1-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.1a11.4 11.4 0 0 1 6 0C17.4 2.8 18.4 3 18.4 3c.6 1.7.2 3 .1 3.3.7.9 1.1 2 1.1 3.2 0 4.7-2.8 5.6-5.4 6 .5.4.9 1.1.9 2.2v3.2c0 .3.2.7.8.6A12.2 12.2 0 0 0 24 12.7 12 12 0 0 0 12 .5Z" />
+                                </svg>
+                            </span>
+                            <span>GitHub</span>
+                        </button>
+
+                        <!-- LinkedIn -->
+                        <button class="platform-item" role="menuitemradio" aria-checked="false" data-platform="linkedin"
+                            data-url="https://www.linkedin.com/in/shreyanshi-garg-s">
+                            <span class="platform-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 8.98h4v12H3v-12Zm7 0h3.8v1.6h.1c.5-.9 1.8-1.9 3.6-1.9 3.8 0 4.5 2.5 4.5 5.7v6.6h-4v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v5.9H10v-12Z" />
+                                </svg>
+                            </span>
+                            <span>LinkedIn</span>
+                        </button>
+
+                        <!-- Behance (default selected) -->
+                        <button class="platform-item" role="menuitemradio" aria-checked="true" data-platform="behance"
+                            data-url="https://www.behance.net/shreyanshigarg">
+                            <span class="platform-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.9 7.1h-4.1v-1h4.1v1zm1.8 4.2c-.2-.9-1-2.6-3.4-2.6-2.4 0-4 1.9-4 4.2s1.6 4.1 4 4.1c2.1 0 3.2-1.3 3.6-2.6h-1.8c-.2.6-.8 1.2-1.8 1.2-1.2 0-2-1-2-2.5h5.4c0-.2 0-.5 0-.8 0-.3 0-.6 0-.9zm-5.4.7c.1-1 .8-1.9 2-1.9 1.3 0 1.8 1 1.9 1.9h-3.9zM9.6 8.1H5.2v7.9h4.7c1.3 0 2.8-.7 2.8-2.4 0-1.1-.7-1.8-1.5-2.1.6-.3 1.2-.9 1.2-1.9 0-1.7-1.4-1.6-2.8-1.6zm-2.9 1.5h2.6c.6 0 1 .2 1 .8 0 .6-.5.8-1.1.8H6.7v-1.6zm2.9 4.8H6.7v-1.9h2.9c.7 0 1.2.3 1.2 1s-.5.9-1.2.9z" />
+                                </svg>
+                            </span>
+                            <span>Behance</span>
+                        </button>
+                    </div>
+
+                    <!-- Follow button -->
+                    <a class="follow-btn" id="followBtn" href="https://www.behance.net/shreyanshigarg" target="_blank"
+                        rel="noopener" data-active-platform="behance" aria-label="Follow Shreyanshi Garg on Behance">
+                        Follow
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
 
+
+
+
     <!-- Hero -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-labelledby="hero-title">
         <div class="container hero-inner">
             <p class="eyebrow">Hey, I'm <span>Shreyanshi Garg</span></p>
-            <h1 class="title">UI/UX DESIGNER</h1>
-            <img class="hero-person" src="assets/hero-photo.png" alt="Your portrait" />
+
+            <h1 id="hero-title" class="title">UI/UX DESIGNER</h1>
+
+            <!-- Use picture + proper image hints for faster, sharper loading -->
+            <picture>
+                <img class="hero-person" src="assets\hero-photo.png" alt="Portrait of Shreyanshi Garg" 
+                decoding="async"
+                fetchpriority="high"
+                loading="eager"
+                />
+            </picture>
+
             <div class="hero-actions">
                 <a class="btn btn-primary" href="#work">My Work</a>
                 <a class="btn btn-secondary" href="#about">About Me</a>
             </div>
         </div>
     </section>
+
 
 
     <!-- About -->
@@ -278,7 +346,7 @@
                                         d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 8.98h4v12H3v-12Zm7 0h3.8v1.6h.1c.5-.9 1.8-1.9 3.6-1.9 3.8 0 4.5 2.5 4.5 5.7v6.6h-4v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v5.9H10v-12Z" />
                                 </svg>
                             </span>
-                            <a href="www.linkedin.com/in/shreyanshi-garg-s" target="_blank">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/shreyanshi-garg-s" target="_blank">LinkedIn</a>
                         </div>
                     </div>
 
@@ -300,7 +368,7 @@
 
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
