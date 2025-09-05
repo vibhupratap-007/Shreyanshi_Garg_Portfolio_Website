@@ -186,20 +186,53 @@ nav a {
     position: relative;
     margin-top: 10px;
     width: min(420px, 55vw);
-    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, .15))
+    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, .15));
+    animation: floatHero 4s ease-in-out infinite;
+    /* floating animation */
 }
 
-@media (min-width:900px) {
+/* Mobile/tablet floating */
+@keyframes floatHero {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Desktop floating (starts from -90px) */
+@media (min-width: 900px) {
     .hero-person {
-        position: relative;
         z-index: 2;
-        transform: translateY(-90px)
+        animation: floatHeroDesktop 4s ease-in-out infinite;
+    }
+
+    @keyframes floatHeroDesktop {
+        0% {
+            transform: translateY(-90px);
+        }
+
+        50% {
+            transform: translateY(-110px);
+        }
+
+        /* floats higher */
+        100% {
+            transform: translateY(-90px);
+        }
     }
 
     .hero {
-        padding-bottom: 80px
+        padding-bottom: 80px;
     }
 }
+
 
 /* ===============================
    Sections & Titles
