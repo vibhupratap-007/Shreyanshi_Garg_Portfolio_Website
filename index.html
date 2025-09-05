@@ -100,11 +100,8 @@
 
             <!-- Use picture + proper image hints for faster, sharper loading -->
             <picture>
-                <img class="hero-person" src="assets\hero-photo.png" alt="Portrait of Shreyanshi Garg" 
-                decoding="async"
-                fetchpriority="high"
-                loading="eager"
-                />
+                <img class="hero-person" src="assets\hero-photo.png" alt="Portrait of Shreyanshi Garg" decoding="async"
+                    fetchpriority="high" loading="eager" />
             </picture>
 
             <div class="hero-actions">
@@ -352,12 +349,21 @@
 
                 </div>
 
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your E-Mail" required>
-                    <textarea placeholder="Enter your message" required></textarea>
+                <form id="contact-form" action="https://formspree.io/f/xdklpvoq" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="_replyto" placeholder="Your E-Mail" required>
+                    <textarea name="message" placeholder="Enter your message" required></textarea>
+
+                    <!-- hidden helpers -->
+                    <input type="hidden" name="_subject"
+                        value="New Contact Form Submission from Shreyanshi Garg's Portfolio">
+                    <input type="hidden" name="_next"
+                        value="https://shreyanshi-garg-portfolio.netlify.app/thank-you.html">
+                    <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
+
                     <button class="submit" type="submit">Submit</button>
                 </form>
+
             </div>
         </div>
     </section>
